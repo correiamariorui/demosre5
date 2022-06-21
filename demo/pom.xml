@@ -41,6 +41,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://ec2-44-204-149-146.compute-1.amazonaws.com:8080/manager/text</url>
+					<server>TomcatServer</server>
+					<path>/${project.name}</path>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
